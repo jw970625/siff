@@ -214,16 +214,23 @@
       <div id="sec06">
         <h2>newsletter</h2>
         <form>
-          <input type="text" id="name" placeholder="이름">
-          <input type="text" id="email" placeholder="이메일">
+          <p>서울독립영화제의 소식을 이메일로 받아보세요!</p>
+          <div class="news">
+            <div class="name">
+              <input type="text" id="name" placeholder="이름" autocomplete="off">
+            </div>
+            <div class="name">
+              <input type="text" id="email" placeholder="이메일" autocomplete="off">
+            </div>
+          </div>
           <div class="user-check">
             <label>
               <input type="radio" value="yes" name="agree"><em></em><span>개인정보 수집 및 이용에 동의합니다. </span>
             </label>
             <label>
               <input type="radio" value="no" name="agree"><em></em><span>광고성 정보 수신에 동의합니다.</span>
-            </label>
-            <button>submit</button>
+            </label><br>
+            <button>subscribe</button>
           </div>
         </form>
       </div>

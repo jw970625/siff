@@ -442,6 +442,78 @@ main h3{
 .community .cate ul li:hover{
   color: #ffffff;
 }
+
+
+#sec06{
+  /* border: 1px solid #ff0000; */
+  width: 1400px;
+  height: 600px;
+  margin: auto;
+}
+#sec06 form{
+  width: 1200px;
+  height: 450px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 0;
+  gap: 30px;
+  text-align: center;
+  background-color: rgba(24, 24, 24, 0.8);
+}
+#sec06 form p{
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 80px;
+}
+
+#sec06 .name :is(input[type=text],input[type=email],){
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  background-size: 22px;
+  text-indent: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  width: 800px;
+  height: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+.name input::placeholder{color: #fff;}
+
+.user-check label{margin: 0 80px;}
+.user-check input[name=agree] {display: none;}  
+.user-check input[name=agree]+em{  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../image/checkbox-04.png);
+  background-position: left;
+  margin-right: 5px;
+  transform: translateY(3px);
+}
+.user-check input[name=agree]:checked+em{background-position: right;}
+.user-check input[name=agree]:checked+em+span{color: #ffffff;}
+
+#sec06 button{
+  background-color: #450158;
+  margin-top: 40px;
+  width: 600px;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+#sec06 button:hover{
+  background-color: #6A0087;
+  border: none;
+  color: #fff;
+}
+.name input::placeholder:checked{
+  color: transparent;
+}
 #sec07{
   font-size: 15px;
   line-height: 1.5em;
@@ -460,16 +532,16 @@ main h3{
 	mask-image: linear-gradient(90deg, transparent, #000000 20%, #000000 80%, transparent);
   margin: auto;
 }
-.banner:hover .banner-slide {
+.banner:hover .banner-slide{
 	animation-play-state: paused;
 }
-.banner-slide {
+.banner-slide{
 	display: inline-block;
 	animation: slide 30s linear infinite;
 }
-.banner-slide a img {
-	width: 200px;
-  height: 120px;
+.banner-slide a img{
+	width: 150px;
+  height: 80px;
 	border: 1px solid #000000;
 	border-radius: 5px;
 	margin-inline: 30px;
