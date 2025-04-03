@@ -19,10 +19,10 @@ html{scroll-behavior: smooth;}
 .goto-top a span:hover{color: #D22EFF;}
 
 body{
+  width: 100%;
   box-sizing: border-box;
   background-color: #000;
   color: #fff;
-  margin: auto;
 }
 
 #wrap h2{
@@ -63,7 +63,7 @@ header nav{
   display: flex;
   justify-content: space-between;
   margin: 70px 0;
-  padding: 0 100px;
+  padding: 0 200px;
 }
 .siff h1{
   font-size: 50px;
@@ -98,13 +98,14 @@ header nav{
   margin-top: 20px;
   padding-top: 100px;
 	display: none;
-	width: 100%;
+	width: 80%;
 	height: 1100px;
 	background: rgba(0,0,0,0.8);
 	position: absolute;
-	top: 170%;
+	top: 70%;
 	left: 50%;
 	transform: translateX(-50%);
+  z-index: 2;
 }
 .sitemap_list{
 	display: flex;
@@ -143,7 +144,7 @@ header nav{
   width: 80%;
   height: 800px;
   text-align: center;
-  margin: 70px auto 0;
+  margin: auto;
 }
 .fade-items ul li{
   display: none;
@@ -170,28 +171,34 @@ header nav{
 .fade-side .prev:hover,
 .fade-side .next:hover{opacity: 0.5;}
 
-main h3{
-  font-family: 'Interop';
-  font-size: 60px;
-  font-weight: 700;
+main button{
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translateX(-50%);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  border-radius: none;
+  z-index: 0;
+}
+
+main h3{
+  font-family: 'Interop';
+  font-size: 70px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px rgba(212, 0, 255, 0.5);
   z-index: -1;
 }
-main:hover h3{
-  text-shadow: 2px 2px 4px rgba(212, 0, 255, 0.5);
-}
+
 #sec01{
   width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  margin-top: 10px;
+  margin: 70px auto 0;
 }
 
 #sec01 h2, p{margin-top: 100px;}
