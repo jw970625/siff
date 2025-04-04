@@ -6,39 +6,54 @@ $(document).ready(function(){
     $(".sitemap").slideToggle("fast");
   });
 
-  //메인 이미지 효과
-  let fadeContainer = $(".fade"),
-      fadeImage = fadeContainer.find(".fade-items ul li"),
-      fadePrev = fadeContainer.find(".fade-side .prev"),
-      fadeNext = fadeContainer.find(".fade-side .next"),
-      oldidx = 0,
-      idx=0,
-      fadeCount = fadeImage.length,
-      interval = 4000;
+  //메인이미지효과
+  let $img = $(".changeimg ul li"),
+  $text = $(".changeimg ul li .des"),
+  $lbtn = $(".side_btn .lbtn"),
+  $rbtn = $(".side_btn .rbtn"),
+  oldImg=0,
+  newImg=0,
+  oldText=0,
+  newText=0,
+  count = $img.length;
 
-  function fadeAni(idx){
-    if(oldidx != idx){
-      fadeImage.eq(oldidx).stop().fadeOut("300");
-      fadeImage.eq(idx).stop().fadeIn("300"); 
-    };
-    oldidx = idx;
-  };
+//이미지 전환효과 함수
+function changeImg(newImg){
+if(oldImg != newImg){
+  $img.eq(oldImg).removeClass("imgVisible");
+  $img.eq(newImg).addClass("imgVisible");
+};
+oldImg = newImg;
+};
 
-  function fadeAuto(){
-    fadeTimer = setInterval(function(){
-      idx = (oldidx + 1) % fadeCount;
-      fadeAni(idx);
-    },interval);
-  };
-  fadeAuto();
+//텍스트 전환효과 함수
+function changeText(newText){
+if(oldText != newText){
+  $text.eq(oldText).removeClass("textVisible");
+  $text.eq(newText).addClass("textVisible");
+};
+oldText = newText;
+};
 
-  fadeContainer.mouseenter(function(){
-    clearInterval(fadeTimer);
-  })
-  .mouseleave(function(){
-    fadeAuto();
-  });
-  
+//자동함수 생성
+function autoImg(){
+newImg++;
+if(newImg>count-1){ 
+  newImg=0;
+}
+changeImg(newImg);
+}; 
+function autoText(){
+newText++;
+if(newText>count-1){ 
+  newText=0;
+}
+changeText(newText);
+};
+timerImg = setInterval(autoImg,4000); 
+timerText = setInterval(autoText,4000);
+
+
   //메뉴효과
   $(".btn li").click(function(){
     $(this).addClass("active").siblings().removeClass("active");
