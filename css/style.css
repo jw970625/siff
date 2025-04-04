@@ -226,7 +226,7 @@ section button{
   width: 150px;
   height: 45px;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
   border-radius: 30px;
   transition: 0.35s;
@@ -455,6 +455,10 @@ section button:hover{
   border: 2px solid #ffffff;
   background-color: rgba(0, 0, 0, 0.8);
   position: relative;
+  transition: 0.35s;
+}
+.community .event:hover{
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .community .event:after{
   content: '';
