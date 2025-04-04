@@ -171,7 +171,7 @@ header nav{
   /* border: 1px solid #ff0000; */
   position:absolute;
   top:50%;
-  left:35%;
+  left:30%;
   transform: translate(-50%,-10%);
   opacity: 0; 
   color: #fff;
@@ -205,10 +205,11 @@ header nav{
 }
 .des button{
   padding: 10px 30px;
-  background: rgba(83, 83, 83, 0.5);
+  /* background: rgba(83, 83, 83, 0.5); */
+  background: transparent;
   color: #fff;
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   transition: 0.35s;
   border-radius: 5px;
